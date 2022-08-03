@@ -109,10 +109,52 @@ nav{
   gap: 16px;
   padding-left: 1em;
 }
-.menu-group span, .nav-bottom span{
+.menu-group span, .nav-bottom ul span{
   color: var(--fourth-black);
   cursor: pointer;
 }
-.menu-group span:hover, .nav-bottom span:hover{
+.menu-group span:hover, .nav-bottom ul span:hover{
   color: var(--main-white);
+}
+
+.profile-main{
+  background-color: var(--secondary-black);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 9px;
+  height: 4.5em;
+  width: 100%;
+  margin-top: 32px;
+  padding: 1em;
+  height: 100%;
+}
+
+.p-left{
+  border-radius: 50%;
+  /* height: 2em;
+  width: 2em; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-white);
+  border: 1px solid var(--secondary-black);
+}
+.p-left i {
+  color: var(--fourth-black);
+  padding: .5em;
+}
+.profile-main .p-center span:first-child{
+  font-size: 14px;
+  color: var(--main-white);
+}
+.profile-main .p-center span:last-child{
+  font-size: 12px;
+  color: var(--fourth-black);
+}
+
+.p-right i{
+  color: var(--fourth-black);
+  cursor: pointer;
 }
