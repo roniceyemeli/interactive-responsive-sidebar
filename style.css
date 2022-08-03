@@ -1,0 +1,115 @@
+* {
+  --primary-color: #bfb2ff;
+  --main-gray: #2C2C2C;
+  --main-white: #ffffff;
+  --primary-black: #1e1e1e;
+  --secondary-black: #333333;
+  --tertiary-black: #808080;
+  --fourth-black: #9e9e9e;
+  --semantic-offline: #ff9580;
+  --semantic-away: #ffdc81;
+  --semantic-notification: #b5daff;
+  --semantic-online: #b5ffc1;
+  box-sizing: border-box;
+  color: var(--main-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+body{
+  background-color: var(--secondary-black);
+}
+
+nav{
+  background-color: var(--main-gray);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 18em;
+  height: 100vh;
+  padding: 40px 17px;
+  border-radius: 16px;
+}
+
+/* logo container */
+.logo-cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-logo-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fa-bars{
+  color: var(--fourth-black);
+  cursor: pointer;
+}
+.fa-bars:hover{
+  color: var(--primary-color);
+}
+
+/* search container */
+.input-wrapper{
+  background-color: var(--secondary-black);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 2.5em;
+  margin-top: 32px;
+}
+
+.input-wrapper .fa-magnifying-glass {
+  color:var(--main-white) ;
+  padding-left: 1em;
+}
+.input-wrapper input {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 1em;
+  color: var(--fourth-black);
+
+}
+.input-wrapper input::placeholder{
+  font-weight: 500;
+  line-height: 19px;
+}
+
+/* menu group container  */
+.menu-group{
+  margin-top: 32px;
+  justify-content: center;
+}
+.menu-group ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.menu-group li{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 1em;
+}
+.menu-group span{
+  color: var(--fourth-black);
+  cursor: pointer;
+}
+.menu-group span:hover{
+  color: var(--main-white);
+}
