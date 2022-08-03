@@ -20,18 +20,29 @@ body{
   background-color: var(--secondary-black);
 }
 
+
 nav{
   background-color: var(--main-gray);
   position: fixed;
   left: 0;
   top: 0;
-  width: 18em;
+  width: 5em;
+  overflow: hidden;
   height: 100vh;
   padding: 40px 17px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+nav:hover{
+  width: 18em;
+}
+nav span, nav img, nav input{
+  display: none;
+}
+nav:hover span, nav:hover img, nav:hover input {
+  display: block;
 }
 
 /* logo container */
@@ -52,11 +63,12 @@ nav{
   justify-content: center;
   align-items: center;
 }
-.fa-bars{
+.fa-database{
   color: var(--fourth-black);
   cursor: pointer;
+  margin-left: 1em;
 }
-.fa-bars:hover{
+.fa-database:hover{
   color: var(--primary-color);
 }
 
@@ -108,10 +120,10 @@ nav{
   align-items: center;
   gap: 16px;
   padding-left: 1em;
+  cursor: pointer;
 }
 .menu-group span, .nav-bottom ul span{
   color: var(--fourth-black);
-  cursor: pointer;
 }
 .menu-group span:hover, .nav-bottom ul span:hover{
   color: var(--main-white);
@@ -133,8 +145,6 @@ nav{
 
 .p-left{
   border-radius: 50%;
-  /* height: 2em;
-  width: 2em; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,8 +163,52 @@ nav{
   font-size: 12px;
   color: var(--fourth-black);
 }
-
+.p-center, .p-right{
+  display: none;
+}
+nav:hover .p-center, nav:hover .p-right{
+  display: block;
+}
 .p-right i{
   color: var(--fourth-black);
   cursor: pointer;
+}
+.p-right{
+  position: relative;
+}
+.nav-bottom #notif{
+  background-color: var(--primary-color);
+  color: var(--main-white);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-left: 4em;
+}
+
+.p-right .dropdown{
+  position: absolute;
+  width: max-content;
+  right: 0em;
+  top: -6em;
+  display: none;
+  gap: 1px;
+  flex-direction: column;
+}
+
+.p-right .dropdown ul{
+  list-style: none;
+  background-color: var(--tertiary-black);
+  border-radius: 5px;
+}
+.p-right .dropdown ul li{
+  height: 30px;
+  color: var(--main-gray);
+  cursor: pointer;
+  padding: 1em;
+  text-transform: capitalize;
+}
+.p-right .dropdown ul li:hover{
+  color: var(--main-white);
+}
+.dropdown.active{
+  display: flex;
 }
