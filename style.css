@@ -29,6 +29,9 @@ nav{
   height: 100vh;
   padding: 40px 17px;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* logo container */
@@ -91,7 +94,7 @@ nav{
   margin-top: 32px;
   justify-content: center;
 }
-.menu-group ul{
+.menu-group ul, .nav-bottom ul{
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -99,17 +102,17 @@ nav{
   margin: 0;
   padding: 0;
 }
-.menu-group li{
+.menu-group li, .nav-bottom li{
   height: 50px;
   display: flex;
   align-items: center;
   gap: 16px;
   padding-left: 1em;
 }
-.menu-group span{
+.menu-group span, .nav-bottom span{
   color: var(--fourth-black);
   cursor: pointer;
 }
-.menu-group span:hover{
+.menu-group span:hover, .nav-bottom span:hover{
   color: var(--main-white);
 }
